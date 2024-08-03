@@ -112,3 +112,15 @@ gulp.task('watch:dev', function () {
 	gulp.watch('./src/files/**/*', gulp.parallel('files:dev'));
 	gulp.watch('./src/scripts/**/*.js', gulp.parallel('js:dev'));
 });
+gulp.task("js:build", function () {
+  return gulp
+    .src("./src/scripts/entry-scripts/*.js")
+    .pipe(plumber(plumberNotify("JS")))
+    .pipe(webpack(require("./../webpack.config.js")))
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"],
+      })
+    )
+    .pipe(gulp.dest("./build/js"));
+});
