@@ -232,7 +232,7 @@ border: 2px solid $first-additional-bg-color;
 }
 
  .socials {
-  display: none;
+  /* display: none; */
   gap: 14px;
   @media screen and (min-width: 768px) {
       display: flex;
