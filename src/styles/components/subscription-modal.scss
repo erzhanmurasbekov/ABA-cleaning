@@ -43,6 +43,7 @@
 }
 
 .form--subscription {
+  margin:0 auto ;
   gap: 0;
   padding: 20px;
   padding-top: 40px;
@@ -130,6 +131,7 @@
  }
 
  .form__user-info {
+  
   margin-bottom: 48px;
   display: flex;
   flex-direction: column;
@@ -400,7 +402,9 @@
  }
 
  .form__payment-buttons {
+  
   display: flex;
+  justify-content: center;
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }

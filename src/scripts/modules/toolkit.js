@@ -1,5 +1,5 @@
 import { kitchenSchemaData, roomSchemaData, bathSchemaData } from "./rooms-shema-data";
-const roomTexts = ["Кухня", "Кімнати", "Санвузол"];
+const roomTexts = ["Kitchen", "Bedroom", "Bathroom"];
 const schemaTypes = ['.schema--kitchen', '.schema--room', '.schema--bath'];
 const container = document.querySelector(".swiper-wrapper");
 

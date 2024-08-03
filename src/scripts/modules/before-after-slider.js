@@ -63,7 +63,7 @@ initializeBeforeAfterBlock();
   
 function createCategoryItemsList() {
   const uniqueCategories = getUniqueCategories();
-  createCategoryItem("Всі", 'Показати всі категорії');
+  createCategoryItem("All", 'Показати всі категорії');
   uniqueCategories.forEach(category => {
     const ariaLabel = `Фільтрувати за категорією ${category}`;
     createCategoryItem(category, ariaLabel);
@@ -84,7 +84,7 @@ function getUniqueCategories() {
     const button = document.createElement("button");
     button.textContent = text;
     button.className = 'category__button';
-    if (text==='Всі') {
+    if (text==='All') {
       button.classList.add('category__button--active');
     } 
     
@@ -114,7 +114,7 @@ function getUniqueCategories() {
   }
 
    function updateComparisonSliderList() {
-    if(chosenCategory !== 'Всі') {
+    if(chosenCategory !== 'All') {
       createFullComparisonSliderList();
     } else {
       displayedItems = 0;
@@ -135,7 +135,7 @@ function getUniqueCategories() {
     const pictureList = grid.querySelectorAll('.comparison-slider');
     pictureList.forEach(item => {
       const categories = item.dataset.categories.split(', ');
-      const hasChosenCategory = chosenCategory === 'Всі' || categories.includes(chosenCategory);
+      const hasChosenCategory = chosenCategory === 'All' || categories.includes(chosenCategory);
       item.classList.toggle('filtered', !hasChosenCategory);
     });
   }
@@ -149,8 +149,8 @@ function getUniqueCategories() {
   }
 
   function toggleShowBtnsVisibility(chosenCategory) {
-    showMoreBtn.classList.toggle('isVisible', chosenCategory === 'Всі');
-    showLessBtn.classList.remove('isVisible', chosenCategory === 'Всі');
+    showMoreBtn.classList.toggle('isVisible', chosenCategory === 'All');
+    showLessBtn.classList.remove('isVisible', chosenCategory === 'All');
   }
 
 

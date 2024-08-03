@@ -1,49 +1,42 @@
-.container--flex {
-  display: flex;
-  flex-direction: column;
-}
-
-
-
+/* Flex container setup for centering */
 .features {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to new rows */
+  justify-content: center; /* Center items horizontally */
+  gap: 30px; /* Add gap between items for smaller screens */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 768px) {
+  .features {
+    column-gap: 30px;
+    row-gap: 60px;
+  }
   
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 30px;
-      row-gap: 60px;
-    }
-    @media screen and (min-width: 1440px) {
-        flex-wrap: no-wrap;
-        column-gap: 40px;
-        row-gap: 0;
-    }
-}
-
-.features__item--benefits {
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 30px)/2);
-  }
-
-  @media screen and (min-width: 1440px) {
-    flex-basis: calc((100% - 3*40px)/4);
-  }
-
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 20px;
-    }
+  .features__item--benefits {
+    flex-basis: calc((100% - 30px) / 2); /* 2 items per row with gap */
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .features {
+    column-gap: 40px;
+    row-gap: 0;
+  }
+  
+  .features__item--benefits {
+    flex-basis: calc((100% - 3 * 40px) / 4); /* 4 items per row with gap */
+  }
+}
+
+/* Center content inside each feature item */
 .features__image-wrap {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+/* Style adjustments */
 .features__title {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
@@ -51,25 +44,25 @@
   font-size: 20px;
   line-height: 1.2;
   margin-bottom: 8px;
- 
-    @media screen and (min-width: 1440px) {
-      font-size: 22px;
-      line-height: 1.23;
-    }
+  
+  @media screen and (min-width: 1440px) {
+    font-size: 22px;
+    line-height: 1.23;
   }
+}
 
 .features__desc {
   text-align: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.38;
-    @media screen and (min-width: 1440px) {
-     font-size: 18px;
-      line-height: 1.39;
-    }
   
-    span {
-      font-weight: 600;
-    }
-
+  @media screen and (min-width: 1440px) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
+  
+  span {
+    font-weight: 600;
+  }
 }

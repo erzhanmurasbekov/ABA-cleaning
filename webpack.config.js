@@ -11,6 +11,7 @@ const config = {
 		calcOrder: './src/scripts/entry-scripts/main-calc-order.js',
 		afterRepair: './src/scripts/entry-scripts/main-after-repair.js',
 	
+		
 	},
 	output: {
 		filename: '[name].bundle.js',

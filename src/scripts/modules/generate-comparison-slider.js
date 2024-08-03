@@ -7,8 +7,8 @@ export function createComparisonSliderItem({beforeName, afterName, desc, categor
   const beforeImage = createComparisonImage(beforeName, desc, 'До прибирання');
   const afterImage = createComparisonImage(afterName, desc, 'Після прибирання');
   
-  const beforeLabel = createLabel('До', 'label--before');
-  const afterLabel = createLabel('Після', 'label--after');
+  const beforeLabel = createLabel('Before', 'label--before');
+  const afterLabel = createLabel('After', 'label--after');
   const handle = createHandle();
   
   listItem.appendChild(beforeImage);
