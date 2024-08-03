@@ -5,8 +5,11 @@
   font-weight:700;
   line-height: 1.15;
   font-size: 26px;
+  text-align: center;
   @media screen and (min-width: 768px) {
     max-width: 453px;
+
+    text-align: start;
     font-size: 36px;
   }
   @media screen and (min-width: 1440px) {
@@ -388,7 +391,12 @@
 .hero__info {
   display: flex;
   flex-direction: column;
- 
+  @media screen and (max-width:1439px) {
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    align-items: start;
+  }
 }
 
 .office-hero__list {
