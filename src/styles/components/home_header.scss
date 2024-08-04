@@ -19,8 +19,8 @@
   .header__container {
   position:relative;
   display: flex;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
  }
 
 
@@ -29,6 +29,7 @@
   align-items: center;
  }
  .nav--aside-menu {
+  padding-top: 10px ;
   padding-left: 20px;
   margin-bottom: 65px;
   @media screen and (min-width: 768px) {
